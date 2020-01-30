@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".Registration">
 
     <TextView
@@ -19,9 +20,10 @@
         android:layout_gravity="center"/>
     <TextView
         android:id="@+id/fstTxt"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:layout_marginTop="20dp"
         android:text="Full Name"/>
 
@@ -34,10 +36,13 @@
         android:ems="10" />
     <TextView
         android:id="@+id/secTxt"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
         android:text="Email"
-        android:layout_marginLeft="30dp" />
+         />
 
     <EditText
         android:id="@+id/txtEmail"
@@ -49,10 +54,14 @@
 
     <TextView
         android:id="@+id/fourthtxt"
-        android:layout_width="wrap_content"
+
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
         android:text="Phone"
-        android:layout_marginLeft="30dp" />
+        />
 
     <EditText
         android:id="@+id/txtPhone"
@@ -65,10 +74,13 @@
 
     <TextView
         android:id="@+id/thirdTxt"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
         android:text="Password"
-        android:layout_marginLeft="30dp" />
+        />
     <EditText
         android:id="@+id/txtPwd"
         android:layout_width="match_parent"

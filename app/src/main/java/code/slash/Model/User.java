@@ -1,4 +1,4 @@
-package code.slash;
+package code.slash.Model;
 
 public class User {
     private String email,name,pass;

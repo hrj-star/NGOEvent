@@ -19,6 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import code.slash.Common.Common;
+import code.slash.Model.User;
 
 //import android.support.annotation.NonNull;
 //import android.support.v7.app.AppCompatActivity;

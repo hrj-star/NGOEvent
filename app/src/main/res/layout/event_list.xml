@@ -22,6 +22,7 @@
 
 
         <TextView
+            android:id="@+id/ngo_name"
             android:layout_width="match_parent"
 
             android:layout_height="wrap_content"
@@ -33,6 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:id="@+id/event_name"
             android:text="Event Name Testgin more test text  new line "
             android:textColor="@android:color/black"
             android:textSize="18sp"
@@ -45,6 +47,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/event_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -54,6 +57,7 @@
                 android:textSize="18sp" />
 
             <TextView
+                android:id="@+id/event_time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
