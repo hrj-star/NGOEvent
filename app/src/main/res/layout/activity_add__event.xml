@@ -195,6 +195,19 @@ tools:context=".Add_Event"
                 android:ems="10"
                 android:inputType="text" />
 
+
+
+            <Switch
+                android:id="@+id/volunteer_req"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                android:ems="10"
+                android:text="Volunteer Required ?" />
+
             <Button
                 android:id="@+id/btnAddEvent"
                 android:layout_width="match_parent"

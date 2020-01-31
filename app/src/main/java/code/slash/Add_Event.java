@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -40,6 +41,7 @@ public class Add_Event extends AppCompatActivity {
     EditText  event_date;
     EditText  event_time;
     EditText  event_description,event_address,event_city,event_pincode,event_oragnizer;
+    Switch swtvol_req;
 
     Calendar c;
     DatePickerDialog datePickerDialog;
@@ -72,6 +74,8 @@ public class Add_Event extends AppCompatActivity {
 
         event_time.setFocusable(false);
         event_time.setClickable(true);
+
+        swtvol_req=(Switch)findViewById(R.id.volunteer_req);
 
         firebaseDatabase=FirebaseDatabase.getInstance();
         databaseReference=firebaseDatabase.getReference("Events");
@@ -167,6 +171,14 @@ public class Add_Event extends AppCompatActivity {
         final String eventpincodestr=event_pincode.getText().toString();
         final String event_oragnizerstr=event_oragnizer.getText().toString();
 
+        final String vol_reqstr;
+        boolean vol_req=swtvol_req.isChecked();
+        if(vol_req){
+            vol_reqstr="Yes";
+        }else {
+            vol_reqstr="No";
+        }
+
 //                ,event_address,event_city,event_pincode;
 
         final List<String> annoucemts=new ArrayList<>();
@@ -181,7 +193,9 @@ public class Add_Event extends AppCompatActivity {
         }else{
 
                         Event newenvent=new Event(
-                                eventaddressstr,eventdescriptionstr,eventcitystr,eventpincodestr,eventnamestr,ngo_namestr,"",eventdatestr,eventtimestr,eventcitystr,event_oragnizerstr,"NO",ngo_idstr,"NO",photos,annoucemts,comments
+                                eventaddressstr,eventdescriptionstr,eventcitystr,eventpincodestr,
+                                eventnamestr,ngo_namestr,"",eventdatestr,eventtimestr,eventcitystr,
+                                event_oragnizerstr,vol_reqstr,ngo_idstr,"NO",photos,annoucemts,comments
                                 );
 
 //                        UUID eventkey= UUID.randomUUID();
