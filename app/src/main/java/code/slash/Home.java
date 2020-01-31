@@ -61,6 +61,8 @@ public class Home extends AppCompatActivity {
                    Log.e("GET All DATA",events.toString());
                }
 
+               onEventLoad(events);
+
             }
 
             @Override
@@ -71,24 +73,8 @@ public class Home extends AppCompatActivity {
         });
 
 
-        Log.e("GET All DATA",events.size()+"");
-        Log.e("GET All DATA",events.get(0).getEvent_name()+"");
 
 
-        List<Event> tmpevents=new ArrayList<>();
-
-        for(int i=0;i<events.size();i++){
-            Event a=(Event)events.get(i);
-            tmpevents.add(new Event(a.getEvent_name(),a.getNgo_name(),a.getDate(),a.getTime()));
-        }
-
-
-
-        RecyclerView  recyclerView=(RecyclerView)findViewById(R.id.eventRecycler);
-
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter=new MyAdapter(recyclerView,this,tmpevents);
-        recyclerView.setAdapter(adapter);
 
         wlcMsg.setText("Hey, "+Common.currentuser.getName());
 
@@ -120,6 +106,15 @@ public class Home extends AppCompatActivity {
 //            }
 //        });
 
+    }
+
+    private void onEventLoad(List<Event> events) {
+
+        RecyclerView  recyclerView=(RecyclerView)findViewById(R.id.eventRecycler);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        adapter=new MyAdapter(recyclerView,this,events);
+        recyclerView.setAdapter(adapter);
     }
 
 
