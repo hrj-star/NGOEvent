@@ -57,8 +57,6 @@ public class Home extends AppCompatActivity {
                for (DataSnapshot dataSnapshot1:dataSnapshot.getChildren()){
                    Event event=dataSnapshot1.getValue(Event.class);
                    events.add(event);
-                   Log.e("GET DATA",event.getEvent_name());
-                   Log.e("GET All DATA",events.toString());
                }
 
                onEventLoad(events);

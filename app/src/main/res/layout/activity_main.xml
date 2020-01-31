@@ -31,6 +31,7 @@
 
     <EditText
         android:id="@+id/txtPhone"
+        android:text="9833771892"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -50,7 +51,7 @@
 
     <EditText
         android:id="@+id/txtPwd"
-
+android:text="123"
         android:inputType="textPassword"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"

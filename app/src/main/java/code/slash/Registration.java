@@ -24,7 +24,7 @@ import code.slash.Model.User;
 //import android.support.v7.app.AppCompatActivity;
 
 public class Registration extends AppCompatActivity {
-    EditText uphone,uemail,username,upass;
+    EditText uphone,uemail,username,upass,userid;
     TextView login;
     Button reg;
     FirebaseDatabase firebaseDatabase;
@@ -86,11 +86,14 @@ public class Registration extends AppCompatActivity {
 
                     if(dataSnapshot.child(usrphone).exists()){
 
-                        Toast.makeText(Registration.this, "User Already Exists", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Registration.this, "Phone Number Already Exists", Toast.LENGTH_SHORT).show();
 
                     }else {
 
-                        User user1=new User(usremail,usrname,usrpwd,"User");
+
+
+
+                        User user1=new User(usremail,usrname,usrpwd,"User",usrphone);
 
                         databaseReference.child(usrphone).setValue(user1);
 
