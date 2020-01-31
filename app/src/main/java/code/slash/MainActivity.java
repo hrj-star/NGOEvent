@@ -85,8 +85,16 @@ public class MainActivity extends AppCompatActivity {
                         if(user.getPass().equals(usrpwd)){
 
                             Common.currentuser=user;
-                            Intent  intent=new Intent(MainActivity.this, Home.class);
+
+                            if(Common.currentuser.getType().equals("NGO")){
+                            Intent  intent=new Intent(MainActivity.this, ngo_home.class);
                             startActivity(intent);
+                            }else{
+                                Intent  intent=new Intent(MainActivity.this, Home.class);
+                                startActivity(intent);
+
+                            }
+
                             Toast.makeText(MainActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
                         }else{
                             Toast.makeText(MainActivity.this, "Wrong Password", Toast.LENGTH_SHORT).show();

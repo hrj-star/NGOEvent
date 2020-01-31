@@ -90,7 +90,7 @@ public class Registration extends AppCompatActivity {
 
                     }else {
 
-                        User user1=new User(usremail,usrname,usrpwd);
+                        User user1=new User(usremail,usrname,usrpwd,"User");
 
                         databaseReference.child(usrphone).setValue(user1);
 

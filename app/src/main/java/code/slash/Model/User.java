@@ -1,16 +1,21 @@
 package code.slash.Model;
 
 public class User {
-    private String email,name,pass;
+    private String email,name,pass,type;
 
      User() {
     }
 
-    public User(String email, String name, String pass) {
+    public String getType() {
+        return type;
+    }
+
+
+    public User(String email, String name, String pass, String type) {
         this.email = email;
         this.name = name;
         this.pass = pass;
-
+        this.type = type;
     }
 
     public String getEmail() {
