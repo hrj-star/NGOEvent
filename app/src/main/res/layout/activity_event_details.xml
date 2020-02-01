@@ -1,26 +1,230 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".event_details">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Event Details" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/eventdetailname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Event name" />
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/me_time">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/entDetail_name"
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="3"
+                    android:text="NGO Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp">
+
+
+                </TextView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/entDetail_eventName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Event Name"
+                android:textColor="@android:color/black"
+
+                android:textSize="25sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+            <ImageView
+                android:id="@+id/entDetail_eventPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/me_time">
+
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/time_24dp">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/entDetail_eventDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Date"
+
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/entDetail_eventTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Time"
+
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/location">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/entDetail_eventLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Location"
+
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/entDetail_eventCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="City"
+
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/person_24dp">
+
+                </ImageView>
+
+
+                <TextView
+                    android:id="@+id/entDetail_hostedby"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:text="Host Name"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/entDetail_nogoingppl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="10 people going"
+                android:textColor="@android:color/black"
+
+                android:textSize="15sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/entDetail_eventDescrption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:text="Event description"
+                android:textColor="@android:color/black"
+                android:textSize="15sp">
+
+            </TextView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
