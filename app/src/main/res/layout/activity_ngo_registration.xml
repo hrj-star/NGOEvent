@@ -157,7 +157,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/rounded_button"
-        android:text="Register" />
+        android:text="Next >" />
 
     <TextView
         android:id="@+id/lnkLogin"
