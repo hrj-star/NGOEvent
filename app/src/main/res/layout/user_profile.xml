@@ -62,7 +62,7 @@
                 android:textColor="#424242"
                 android:textSize="21sp"
                 android:textStyle="bold" />
-            
+
             <TextView
                 android:id="@+id/usertxt_email"
                 android:layout_width="wrap_content"

@@ -40,7 +40,7 @@ public class Add_Event extends AppCompatActivity {
     EditText event_name;
     EditText  event_date;
     EditText  event_time;
-    EditText  event_description,event_address,event_city,event_pincode,event_oragnizer;
+    EditText  event_description,event_address,event_city,event_pincode,event_oragnizer,event_limit;
     Switch swtvol_req;
 
     Calendar c;
@@ -67,6 +67,7 @@ public class Add_Event extends AppCompatActivity {
         event_pincode=(EditText)findViewById(R.id.new_event_pincode);
 
         event_oragnizer=(EditText)findViewById(R.id.new_event_oragnizer);
+        event_limit=(EditText)findViewById(R.id.new_event_limit);
 
         event_date.setFocusable(false);
         event_date.setClickable(true);
@@ -162,6 +163,7 @@ public class Add_Event extends AppCompatActivity {
         final  String eventdatestr=event_date.getText().toString();
         final String eventtimestr=event_time.getText().toString();
 
+
         final String ngo_namestr= Common.currentuser.getName().toString();
         final String ngo_idstr= Common.currentuser.getUserphone();
 
@@ -170,6 +172,7 @@ public class Add_Event extends AppCompatActivity {
         final String eventcitystr=event_city.getText().toString();
         final String eventpincodestr=event_pincode.getText().toString();
         final String event_oragnizerstr=event_oragnizer.getText().toString();
+        final String eventlimit= event_limit.getText().toString();
 
         final String vol_reqstr;
         boolean vol_req=swtvol_req.isChecked();
@@ -179,7 +182,6 @@ public class Add_Event extends AppCompatActivity {
             vol_reqstr="No";
         }
 
-//                ,event_address,event_city,event_pincode;
 
         final List<String> annoucemts=new ArrayList<>();
         annoucemts.add(" ");
@@ -188,14 +190,14 @@ public class Add_Event extends AppCompatActivity {
         final List<String> comments=new ArrayList<>();
         comments.add(" ");
 
-        if(eventnamestr.isEmpty()||eventdatestr.isEmpty()||eventtimestr.isEmpty()||eventdescriptionstr.isEmpty()||eventaddressstr.isEmpty()||eventcitystr.isEmpty()||eventpincodestr.isEmpty()){
-            Toast.makeText(Add_Event.this, "Please fill all details ", Toast.LENGTH_SHORT).show();
+        if(eventnamestr.isEmpty()||eventdatestr.isEmpty()||eventtimestr.isEmpty()||eventdescriptionstr.isEmpty()||eventaddressstr.isEmpty()||eventcitystr.isEmpty()||eventpincodestr.isEmpty()||eventlimit.isEmpty()){
+            Toast.makeText(Add_Event.this, "Please fill all the  details ", Toast.LENGTH_SHORT).show();
         }else{
 
                         Event newenvent=new Event(
                                 eventaddressstr,eventdescriptionstr,eventcitystr,eventpincodestr,
                                 eventnamestr,ngo_namestr,"",eventdatestr,eventtimestr,eventcitystr,
-                                event_oragnizerstr,vol_reqstr,ngo_idstr,"NO",photos,annoucemts,comments
+                                event_oragnizerstr,vol_reqstr,ngo_idstr,"NO",photos,annoucemts,comments,eventlimit
                                 );
 
 //                        UUID eventkey= UUID.randomUUID();
